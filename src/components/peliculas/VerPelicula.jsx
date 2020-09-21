@@ -28,16 +28,12 @@ class VerPelicula extends Component {
         }
     }
 
-    saludar(e){
-        document.getElementById('btn_saludar').value = 1
-    }
-
     render() {
         //console.log(this.props.match.params.id)
         return (
             <div className="tabla-peliculas">
                 <PeliculaTable {...this.state}/>
-                <button id="btn_saludar" onClick={this.saludar} value="0">Saludar</button>
+                <button id="btn_saludar" onClick={this.props.saludar} value="0">Saludar</button>
             </div>
         );
     }
